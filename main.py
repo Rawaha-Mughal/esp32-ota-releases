@@ -2,7 +2,6 @@ from machine import Pin
 from time
 
 button = Pin(4, Pin.IN, Pin.PULL_DOWN)  # Changed to GPIO4 with pull-down
-led = Pin(2, Pin.OUT)
 
 # Main loop
 while True:
