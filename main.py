@@ -1,13 +1,15 @@
+from machine import Pin
+from time
 
-import machine
-import time
+button = Pin(4, Pin.IN, Pin.PULL_DOWN)  # Changed to GPIO4 with pull-down
+led = Pin(2, Pin.OUT)
 
-# Configure LED pin (GPIO 2 is common for built-in LED)
-led = machine.Pin(2, machine.Pin.OUT)
-
-# Blink LED with 0.2-second interval
+# Main loop
 while True:
-    led.value(1)  # LED ON
-    time.sleep(1)
-    led.value(0)  # LED OFF
-    time.sleep(1)
+
+# put the code here
+
+    print(button.value())
+    if button.value() == 1:  # Button pressed (high due to pull-down)
+        print("Stopped")
+        break
