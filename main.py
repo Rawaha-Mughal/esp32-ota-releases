@@ -1,14 +1,12 @@
 from machine import Pin
-from time
+from time import sleep
 
-button = Pin(4, Pin.IN, Pin.PULL_DOWN)  # Changed to GPIO4 with pull-down
+button = Pin(4, Pin.IN, Pin.PULL_DOWN)  # GPIO4 with pull-down
 
 # Main loop
 while True:
-
-# put the code here
-
-    print(button.value())
-    if button.value() == 1:  # Button pressed (high due to pull-down)
+    #code here
+    if button.value() == 1:  # Button pressed
         print("Stopped")
         break
+    sleep(0.1)  # Prevent excessive polling
